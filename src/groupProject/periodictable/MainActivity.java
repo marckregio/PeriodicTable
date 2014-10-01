@@ -1,5 +1,5 @@
 package groupProject.periodictable;
-
+//This Application is for STI College Novaliches
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
