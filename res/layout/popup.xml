@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="#E0E0E0">
+
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <Button
+        android:id="@+id/closepopup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+        android:text="Close" />
+    </RelativeLayout>
+    
+    <LinearLayout android:orientation="horizontal"  android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="30dp">
+        <TextView
+            android:id="@+id/elementName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:text="ElementName" />
+        
+        <TextView
+            android:id="@+id/elementDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="15dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+    </LinearLayout>
+    
+
+</RelativeLayout>
