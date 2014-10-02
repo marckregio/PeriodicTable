@@ -6,11 +6,11 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
-public class MainActivity extends DeclarationClass{
+public class MainActivity extends DeclarationClass implements ElementProperties{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,18 @@ public class MainActivity extends DeclarationClass{
     }
 
     public void init(){
+    	//POPUP
     	inflater = (LayoutInflater)getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
     	popup = inflater.inflate(R.layout.popup, null);
-    	window = new PopupWindow(popup,450,400);
+    	window = new PopupWindow(popup,500,400);
     	window.setFocusable(false);
     	window.setAnimationStyle(R.style.PopupAnimation);
+    	//TextViews
+    	elementName = (TextView) popup.findViewById(R.id.elementName);
+    	elementDesc = (TextView) popup.findViewById(R.id.elementDescription);
+    	//BUTTONS
     	hydrogenButton = (Button) findViewById(R.id.hydrogen);
+    	lithiumButton = (Button) findViewById(R.id.lithium);
     	closePopup = (Button) popup.findViewById(R.id.closepopup);
    
     	listener();
@@ -34,6 +40,8 @@ public class MainActivity extends DeclarationClass{
     	hydrogenButton.setOnClickListener(new Button.OnClickListener(){
 			@Override
 			public void onClick(View v) {
+				elementName.setText(Hydrogen);
+				elementDesc.setText(Hydrogen_Desc);
 				closePopup.setOnClickListener(new Button.OnClickListener(){
 					@Override
 					public void onClick(View v) {
@@ -41,6 +49,20 @@ public class MainActivity extends DeclarationClass{
 					}
 				});
 				window.showAtLocation(hydrogenButton, Gravity.CENTER, 0, 0);
+			}
+    	});
+    	lithiumButton.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				elementName.setText(Lithium);
+				elementDesc.setText(Lithium_Desc);
+				closePopup.setOnClickListener(new Button.OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						window.dismiss();
+					}
+				});
+				window.showAtLocation(lithiumButton, Gravity.CENTER, 0, 0);
 			}
     	});
     }
