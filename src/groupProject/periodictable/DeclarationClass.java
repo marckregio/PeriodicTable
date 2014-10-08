@@ -10,7 +10,12 @@ import android.widget.TextView;
 public class DeclarationClass extends Activity{
 	public TextView elementName,elementDesc;
 	public Button closePopup;
-	public Button hydrogenButton, lithiumButton;
+	///ELEMENTS
+	public Button hydrogenButton, lithiumButton, sodiumButton, potassiumButton, rubidiumButton, caesiumButton, franciumButton,
+		berylliumButton, magnesiumButton, calciumButton, strontiumButton, bariumButton, radiumButton, scandiumButton, yttriumButton,
+		lanthanumButton;
+	/////
+	public Button athenaButton;
 	public LayoutInflater inflater;
 	public View popup;
 	public PopupWindow window;

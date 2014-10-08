@@ -1,5 +1,5 @@
 package groupProject.periodictable;
-//This Application is for STI College Novaliches
+
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,23 +20,42 @@ public class MainActivity extends DeclarationClass implements ElementProperties{
     }
 
     public void init(){
-    	//POPUP
+    	//POPUP (wag iedit)
     	inflater = (LayoutInflater)getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
     	popup = inflater.inflate(R.layout.popup, null);
-    	window = new PopupWindow(popup,500,400);
+    	window = new PopupWindow(popup,700,580);
     	window.setFocusable(false);
     	window.setAnimationStyle(R.style.PopupAnimation);
-    	//TextViews
+    	//TextViews (wag iedit)
     	elementName = (TextView) popup.findViewById(R.id.elementName);
     	elementDesc = (TextView) popup.findViewById(R.id.elementDescription);
-    	//BUTTONS
+    	//BUTTONS (pwedeng iedit)
     	hydrogenButton = (Button) findViewById(R.id.hydrogen);
     	lithiumButton = (Button) findViewById(R.id.lithium);
+    	sodiumButton = (Button) findViewById(R.id.sodium);
+    	potassiumButton = (Button) findViewById(R.id.potassium);
+    	//////
+    	athenaButton = (Button) findViewById(R.id.athena);
+    	//(wag iedit)
     	closePopup = (Button) popup.findViewById(R.id.closepopup);
    
     	listener();
     }
     public void listener(){
+    	athenaButton.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				elementName.setText("Athena");
+				elementDesc.setText("HAHAHAHA");
+				closePopup.setOnClickListener(new Button.OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						window.dismiss();
+					}
+				});
+				window.showAtLocation(athenaButton, Gravity.CENTER, 0, 0);
+			}
+    	});
     	hydrogenButton.setOnClickListener(new Button.OnClickListener(){
 			@Override
 			public void onClick(View v) {
@@ -63,6 +82,34 @@ public class MainActivity extends DeclarationClass implements ElementProperties{
 					}
 				});
 				window.showAtLocation(lithiumButton, Gravity.CENTER, 0, 0);
+			}
+    	});
+    	sodiumButton.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				elementName.setText(Sodium);
+				elementDesc.setText(Sodium_Desc);
+				closePopup.setOnClickListener(new Button.OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						window.dismiss();
+					}
+				});
+				window.showAtLocation(sodiumButton, Gravity.CENTER, 0, 0);
+			}
+    	});
+    	potassiumButton.setOnClickListener(new Button.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				elementName.setText(Potassium);
+				elementDesc.setText(Potassium_Desc);
+				closePopup.setOnClickListener(new Button.OnClickListener(){
+					@Override
+					public void onClick(View v) {
+						window.dismiss();
+					}
+				});
+				window.showAtLocation(potassiumButton, Gravity.CENTER, 0, 0);
 			}
     	});
     }

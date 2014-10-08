@@ -21,4 +21,22 @@ public interface ElementProperties {
 			"which are usually ionic. Lithium occurs in a number of pegmatitic minerals, but due to its solubility as an ion, " +
 			"is present in ocean water and is commonly obtained from brines and clays. On a commercial scale, " +
 			"lithium is isolated electrolytically from a mixture of lithium chloride and potassium chloride.";
+	String Sodium = "Sodium";
+	String Sodium_Desc = "is a chemical element with symbol Na (from Latin: natrium) and atomic number 11. " +
+			"It is a soft, silver-white, highly reactive metal and is a member of the alkali metals; " +
+			"its only stable isotope is 23Na. The free metal does not occur in nature, " +
+			"but instead must be prepared from its compounds; " +
+			"it was first isolated by Humphry Davy in 1807 by the electrolysis of sodium hydroxide. " +
+			"Sodium is the sixth most abundant element in the Earth's crust, " +
+			"and exists in numerous minerals such as feldspars, sodalite and rock salt (NaCl). " +
+			"Many salts of sodium are highly water-soluble, " +
+			"and their sodium has been leached by the action of water so that sodium and chlorine (Cl) " +
+			"are the most common dissolved elements by weight in the Earth's bodies of oceanic water.";
+	String Potassium = "Potassium";
+	String Potassium_Desc = "is a chemical element with symbol K (derived from Neo-Latin kalium) and atomic number 19. " +
+			"Elemental potassium is a soft silvery-white alkali metal that oxidizes rapidly in air and is very reactive with water, " +
+			"generating sufficient heat to ignite the hydrogen emitted in the reaction and burning with a lilac flame. Naturally occurring " +
+			"potassium is composed of three isotopes, one of which, 40K, is radioactive. Traces (0.012%) of this isotope are found in all " +
+			"potassium making it the most common radioactive element in the human body and in many biological materials, " +
+			"as well as in common building substances such as concrete";
 }
